@@ -22,7 +22,7 @@ namespace WorkItApp
             controller.setView(view);
             App app = new App();
             app.Run((MainWindow)view);
-            int x = 10;
+     //       int x = 10;
         }
     }
 }
