@@ -22,7 +22,6 @@ namespace WorkItApp.Model
             this.bonuses = new List<string>();
             string path = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName;
             connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + path + @"\WorkIt.accdb;Persist Security Info=False;";
-
         }
 
         public List<string> getCurrentBonuses()
@@ -198,6 +197,7 @@ namespace WorkItApp.Model
                 updateCommand.ExecuteNonQuery();
             }
             connection.Close();
+
             return Convert.ToString(order_num);
         }
     }
