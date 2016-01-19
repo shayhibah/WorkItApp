@@ -10,9 +10,10 @@ namespace WorkItApp.Controller
 {
     public class MyController : IController
     {
-        IModel model;
-        IView view;
-        List<string> bonuses;
+        private IModel model;
+        private IView view;
+        private List<string> bonuses;
+
         public MyController() { }
         public List<string> getCurrentBonuses()
         {
