@@ -30,7 +30,7 @@ namespace WorkItApp.View
         {
             return controller;
         }
-        private void Exit_Click(object sender, RoutedEventArgs e)
+        private void Exit_Click(object sender, RoutedEventArgs e) //Exit from App
         {
             this.Close();
         }
