@@ -57,7 +57,7 @@ namespace WorkItApp.View
         {
             if(this.bonuses_lbx.SelectedItem != null)
             {
-                string selectedBonusNumber = this.bonuses_lbx.SelectedItem.ToString().Split('\t')[0];
+                string selectedBonusNumber = this.bonuses_lbx.SelectedItem.ToString().Split('\t')[2];
                 string msg = controller.addBonusToCust(currentID, Convert.ToInt32(selectedBonusNumber));
                 MessageBox.Show(msg);
                 Customer_Window.Back_to_Main_Btn_Click(null,null);
