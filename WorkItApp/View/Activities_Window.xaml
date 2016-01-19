@@ -1,0 +1,32 @@
+﻿<Window x:Class="WorkItApp.View.Activities_Window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WorkItApp.View"
+        mc:Ignorable="d"
+        Title="Activities_Window" Height="600" Width="800" WindowState="Maximized" WindowStartupLocation="CenterScreen" WindowStyle="None">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/WorkItApp;component/Images/main_background.jpg" Opacity="0.25"></ImageBrush>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="301*"></ColumnDefinition>
+            <ColumnDefinition Width="95*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="1" Background="#FF1D1C32">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Button Grid.Row="1" Name="Add_Update_Activity_Btn" Content ="הוספת/עדכון חוג" Width="150" Height="40" Background="#FF34325D" Foreground="White" FontFamily="Arial" FontSize="13.333"></Button>
+            <Button Grid.Row="2" Name="Del_Activity_Btn" Content ="הסרת חוג קיים" Width="150" Height="40" Background="#FF34325D" Foreground="White" FontFamily="Arial" FontSize="13.333"></Button>
+            <Button Grid.Row="3" Name="Show_Custs_Per_Activity_Btn" Content ="שליפת פרטי רשומים לחוג" Width="150" Height="40" Background="#FF34325D" Foreground="White" FontFamily="Arial" FontSize="13.333"></Button>
+            <Button Grid.Row="5" Name="Back_to_Main_Btn" Click="Back_to_Main_Btn_Click" Content ="חזרה לתפריט הראשי" Width="150" Height="40" Background="#FF34325D" Foreground="Cyan" FontFamily="Arial" FontSize="13.333"></Button>
+        </Grid>
+    </Grid>
+</Window>

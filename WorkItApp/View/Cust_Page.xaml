@@ -1,0 +1,51 @@
+﻿<Page x:Class="WorkItApp.View.Cust_Page"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WorkItApp.View"
+      mc:Ignorable="d" 
+      d:DesignHeight="400" d:DesignWidth="400"
+      Title="Cust_Page">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Column="1" Grid.Row="0" Text="טופס הזנת פרטי לקוח חדש" Margin="10,0,10,0" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Arial" FontSize="20" FontWeight="Bold" Foreground="#FF34325D" ></TextBlock>
+        <TextBlock Grid.Column="2" Grid.Row="1" Text="שם פרטי" Margin="10,0,10,0" HorizontalAlignment="Right" VerticalAlignment="Center" FontFamily="Arial" FontSize="20" FontWeight="Bold"></TextBlock>
+        <TextBox Name="First_Name" Grid.Column="1" Grid.Row="1" TextAlignment="Right" Background="{x:Null}" Margin="10,5,10,5" FontFamily="Arial" FontSize="20" VerticalAlignment="Center"></TextBox>
+        <TextBlock Grid.Column="2" Grid.Row="2" Text="שם משפחה" Margin="10,0,10,0" HorizontalAlignment="Right" VerticalAlignment="Center" FontFamily="Arial" FontSize="20" FontWeight="Bold"></TextBlock>
+        <TextBox Name="Last_Name" Grid.Column="1" Grid.Row="2" TextAlignment="Right" Background="{x:Null}" Margin="10,5,10,5" FontFamily="Arial" FontSize="20" VerticalAlignment="Center"></TextBox>
+        <TextBlock Grid.Column="2" Grid.Row="3" Text="תעודת זהות" Margin="10,0,10,0" HorizontalAlignment="Right" VerticalAlignment="Center" FontFamily="Arial" FontSize="20" FontWeight="Bold"></TextBlock>
+        <TextBox Name="ID" Grid.Column="1" Grid.Row="3" TextAlignment="Right" Background="{x:Null}" Margin="10,5,10,5" FontFamily="Arial" FontSize="20" VerticalAlignment="Center"></TextBox>
+        <TextBlock Grid.Column="2" Grid.Row="4" Text="כתובת מגורים" Margin="10,0,10,0" HorizontalAlignment="Right" VerticalAlignment="Center" FontFamily="Arial" FontSize="20" FontWeight="Bold"></TextBlock>
+        <TextBox Name="Address" Grid.Column="1" Grid.Row="4" TextAlignment="Right" Background="{x:Null}" Margin="10,5,10,5" FontFamily="Arial" FontSize="20" VerticalAlignment="Center"></TextBox>
+        <TextBlock Grid.Column="2" Grid.Row="5" Text="מספר טלפון" Margin="10,0,10,0" HorizontalAlignment="Right" VerticalAlignment="Center" FontFamily="Arial" FontSize="20" FontWeight="Bold"></TextBlock>
+        <TextBox Name="Phone" Grid.Column="1" Grid.Row="5" TextAlignment="Right" Background="{x:Null}" Margin="10,5,10,5" FontFamily="Arial" FontSize="20" VerticalAlignment="Center"></TextBox>
+        <TextBlock Grid.Column="2" Grid.Row="6" Text="DD/MM/YYYY תאריך לידה" Margin="10,0,10,0" HorizontalAlignment="Right" VerticalAlignment="Center" FontFamily="Arial" FontSize="20" FontWeight="Bold"></TextBlock>
+        <TextBox Name="Birth_Date" Grid.Column="1" Grid.Row="6" TextAlignment="Right" Background="{x:Null}" Margin="10,5,10,5" FontFamily="Arial" FontSize="20" VerticalAlignment="Center"></TextBox>
+        <TextBlock Grid.Column="2" Grid.Row="7" Text="דואר אלקטרוני" Margin="10,0,10,0" HorizontalAlignment="Right" VerticalAlignment="Center" FontFamily="Arial" FontSize="20" FontWeight="Bold"></TextBlock>
+        <TextBox Name="Email" Grid.Column="1" Grid.Row="7" TextAlignment="Right" Background="{x:Null}" Margin="10,5,10,5" FontFamily="Arial" FontSize="20" VerticalAlignment="Center"></TextBox>
+        <TextBlock Grid.Column="2" Grid.Row="8" Text="סיסמה אישית" Margin="10,0,10,0" HorizontalAlignment="Right" VerticalAlignment="Center" FontFamily="Arial" FontSize="20" FontWeight="Bold"></TextBlock>
+        <TextBox Name="Password" Grid.Column="1" Grid.Row="8" TextAlignment="Right" Background="{x:Null}" Margin="10,5,10,5" FontFamily="Arial" FontSize="20" VerticalAlignment="Center"></TextBox>
+        <Button Name="Accept_Btn" Click="Accept_Btn_Click" Grid.Column="1" Grid.Row="11" Content="אישור" Margin="120,5,120,5" FontFamily="Arial" FontSize="20" FontWeight="Bold" Background="#FF34325D" Foreground="White"></Button>
+    </Grid>
+</Page>

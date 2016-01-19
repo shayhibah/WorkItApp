@@ -1,0 +1,34 @@
+﻿<Window x:Class="WorkItApp.View.Items_Window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WorkItApp.View"
+        mc:Ignorable="d"
+        Title="Items_Window" Height="600" Width="800" WindowState="Maximized" WindowStartupLocation="CenterScreen" WindowStyle="None">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/WorkItApp;component/Images/main_background.jpg" Opacity="0.25"></ImageBrush>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="301*"></ColumnDefinition>
+            <ColumnDefinition Width="95*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="1" Background="#FF1D1C32">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Button Grid.Row="1" Name="Add_Item_Btn" Content ="הוספת מוצר למלאי" Width="150" Height="40" Background="#FF34325D" Foreground="White" FontFamily="Arial" FontSize="13.333"></Button>
+            <Button Grid.Row="2" Name="Update_Item_Btn" Content ="עדכון פרטי מוצר קיים" Width="150" Height="40" Background="#FF34325D" Foreground="White" FontFamily="Arial" FontSize="13.333"></Button>
+            <Button Grid.Row="3" Name="Del_Item_Btn" Content ="הסרת מוצר מהמלאי" Width="150" Height="40" Background="#FF34325D" Foreground="White" FontFamily="Arial" FontSize="13.333"></Button>
+            <Button Grid.Row="4" Name="Show_Sales_Report_Btn" Content ="הפק דוח מכירות" Width="150" Height="40" Background="#FF34325D" Foreground="White" FontFamily="Arial" FontSize="13.333"></Button>
+            <Button Grid.Row="6" Name="Back_to_Main_Btn" Click="Back_to_Main_Btn_Click" Content ="חזרה לתפריט הראשי" Width="150" Height="40" Background="#FF34325D" Foreground="Cyan" FontFamily="Arial" FontSize="13.333"></Button>
+        </Grid>
+    </Grid>
+</Window>

@@ -1,0 +1,52 @@
+﻿<Window x:Class="WorkItApp.View.Customers_Window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WorkItApp.View"
+        mc:Ignorable="d"
+        Title="Customers_Window" Height="600" Width="800" WindowState="Maximized" WindowStartupLocation="CenterScreen" WindowStyle="None">
+    <Grid Name="Cust_Grid">
+        <Grid.Background>
+            <ImageBrush ImageSource="/WorkItApp;component/Images/main_background.jpg" Opacity="0.25"></ImageBrush>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="301*"></ColumnDefinition>
+            <ColumnDefinition Width="95*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0">
+            <Frame Name="Cust_Frame" Margin="25" NavigationUIVisibility="Hidden" ></Frame>
+        </Grid>
+        <Grid Grid.Column="1" Background="#FF1D1C32">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Button Grid.Row="1" Name="Add_Cust_Btn" Click="Add_Cust_Btn_Click" Content ="הוספת מנוי חדש" Width="150" Height="40" Background="#FF34325D" Foreground="White" FontFamily="Arial" FontSize="13.333"></Button>
+            <Button Grid.Row="2" Name="Del_Cust_Btn" Content ="הסרת מנוי קיים" Width="150" Height="40" Background="#FF34325D" Foreground="White" FontFamily="Arial" FontSize="13.333"></Button>
+            <Button Grid.Row="3" Name="Add_Cust_to_Act_Btn" Content ="הוספת מנוי לחוג" Width="150" Height="40" Background="#FF34325D" Foreground="White" FontFamily="Arial" FontSize="13.333"></Button>
+            <Button Grid.Row="4" Name="Del_Cust_from_Act_Btn" Content ="הסרת מנוי מחוג" Width="150" Height="40" Background="#FF34325D" Foreground="White" FontFamily="Arial" FontSize="13.333"></Button>
+            <Button Grid.Row="5" Name="Act_Per_Cust_Btn" Content ="שליפת רשימת חוגים למנוי" Width="150" Height="40" Background="#FF34325D" Foreground="White" FontFamily="Arial" FontSize="13.333"></Button>
+            <Button Grid.Row="6" Name="Plan_Per_Cust_Btn" Content ="שליפת תוכנית אימונים למנוי" Width="150" Height="40" Background="#FF34325D" Foreground="White" FontFamily="Arial" FontSize="13.333"></Button>
+            <Button Grid.Row="7" Name="Update_Plan_to_Cust_Btn" Content ="עדכון תוכנית אימונים למנוי" Width="150" Height="40" Background="#FF34325D" Foreground="White" FontFamily="Arial" FontSize="13.333"></Button>
+            <Button Grid.Row="8" Name="Add_Training_to_Cust_Btn" Content ="רישום מנוי לאימון אישי" Width="150" Height="40" Background="#FF34325D" Foreground="White" FontFamily="Arial" FontSize="13.333"></Button>
+            <Button Grid.Row="9" Name="Sell_Item_to_Cust_Btn" Content ="מכירת מוצר למנוי" Width="150" Height="40" Background="#FF34325D" Foreground="White" FontFamily="Arial" FontSize="13.333" Click="Sell_Item_to_Cust_Btn_Click"></Button>
+            <Button Grid.Row="10" Name="Add_Bonus_to_Cust_Btn" Click="Add_Bonus_to_Cust_Btn_Click" Content ="הענקת הטבה למנוי" Width="150" Height="40" Background="#FF34325D" Foreground="White" FontFamily="Arial" FontSize="13.333"></Button>
+            <Button Grid.Row="11" Name="Show_Total_Cust_Report_Btn" Content ="הפקת דוח מנויים כללי" Width="150" Height="40" Background="#FF34325D" Foreground="White" FontFamily="Arial" FontSize="13.333"></Button>
+            <Button Grid.Row="13" Name="Back_to_Main_Btn" Click="Back_to_Main_Btn_Click" Content ="חזרה לתפריט הראשי" Width="150" Height="40" Background="#FF34325D" Foreground="Cyan" FontFamily="Arial" FontSize="13.333"></Button>
+        </Grid>
+    </Grid>
+</Window>
