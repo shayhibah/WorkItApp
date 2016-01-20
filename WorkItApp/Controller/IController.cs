@@ -19,5 +19,6 @@ namespace WorkItApp.Controller
         List<string> getItems();
         string searchItemCust(string text);
         string updateAmounts(Dictionary<string, int> soldItems, string text, double total);
+        List<object> calculateItemsSale(Items_Sale_Page items_Sale_Page);
     }
 }

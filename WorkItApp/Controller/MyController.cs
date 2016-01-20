@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 using WorkItApp.Model;
 using WorkItApp.View;
 
@@ -57,6 +58,45 @@ namespace WorkItApp.Controller
         public string updateAmounts(Dictionary<string, int> soldItems, string cust_id, double total)
         {
             return model.updateSoldItems(soldItems, cust_id, total);
+        }
+
+        public List<object> calculateItemsSale(Items_Sale_Page items_Sale_Page)
+        {
+            List<Object> results = new List<object>();
+            Dictionary<string, int> SoldItems = new Dictionary<string, int>();
+            string errMsg = "";
+            double total = 0;
+            bool correctAmounts = true;
+            for (int i = 1; i <= 5; i++) //Indexes of Items inside Grid
+            {
+                TextBox t = (TextBox)items_Sale_Page.Items_Table.Children[i + 4];
+                int num = 0;
+                if (t.Text != "" && !int.TryParse(t.Text, out num))
+                {
+                    errMsg += "ערך של כמות רצויה לא תקין עבור הפריט " + ((TextBlock)items_Sale_Page.Items_Table.Children[15 + (i - 1) * 4 - 2]).Text + "\n";
+                    correctAmounts = false;
+                }
+                else if (t.Text != "")
+                {
+                    TextBlock b = (TextBlock)items_Sale_Page.Items_Table.Children[15 + (i - 1) * 4];
+                    TextBlock cAmnt = (TextBlock)items_Sale_Page.Items_Table.Children[15 + (i - 1) * 4 - 1];
+                    int wantedAmount, currentAmount;
+                    wantedAmount = Convert.ToInt32(t.Text);
+                    currentAmount = Convert.ToInt32(cAmnt.Text);
+                    SoldItems.Add(((TextBlock)items_Sale_Page.Items_Table.Children[15 + (i - 1) * 4 - 3]).Text, wantedAmount);
+                    if (wantedAmount > currentAmount)
+                    {
+                        correctAmounts = false;
+                        errMsg += "קיימת חריגה בכמות עבור הפריט: " + ((TextBlock)items_Sale_Page.Items_Table.Children[15 + (i - 1) * 4 - 2]).Text + "\n";
+                    }
+                    total += Convert.ToInt32(t.Text) * Convert.ToDouble(b.Text);
+                }
+            }
+            results.Add(errMsg);
+            results.Add(total);
+            results.Add(correctAmounts);
+            results.Add(SoldItems);
+            return results;
         }
     }
 }

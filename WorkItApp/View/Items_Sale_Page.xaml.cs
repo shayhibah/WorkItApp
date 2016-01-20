@@ -67,34 +67,12 @@ namespace WorkItApp.View
         private void Calculate_Btn_Click(object sender, RoutedEventArgs e)
         {
             SoldItems.Clear();
-            correctAmounts = true;
-            string errMsg = "";
-            total = 0;
-            for(int i = 1; i <= 5; i++) //Indexes of Items inside Grid
-            {
-                TextBox t = (TextBox)Items_Table.Children[i + 4];
-                int num = 0;
-                if(t.Text!= "" && !int.TryParse(t.Text, out num))
-                {
-                    errMsg+= "ערך של כמות רצויה לא תקין עבור הפריט " + ((TextBlock)Items_Table.Children[15 + (i - 1) * 4 - 2]).Text + "\n";
-                    correctAmounts = false;
-                }
-                else if(t.Text != "")
-                {
-                    TextBlock b = (TextBlock)Items_Table.Children[15 + (i-1) * 4];
-                    TextBlock cAmnt = (TextBlock)Items_Table.Children[15 + (i - 1) * 4 -1];
-                    int wantedAmount, currentAmount;
-                    wantedAmount = Convert.ToInt32(t.Text);
-                    currentAmount = Convert.ToInt32(cAmnt.Text);
-                    SoldItems.Add(((TextBlock)Items_Table.Children[15 + (i - 1) * 4 - 3]).Text,wantedAmount);
-                    if(wantedAmount > currentAmount)
-                    {
-                        correctAmounts = false;
-                        errMsg += "קיימת חריגה בכמות עבור הפריט: " + ((TextBlock)Items_Table.Children[15 + (i - 1) * 4 - 2]).Text +"\n";
-                    }
-                    total += Convert.ToInt32(t.Text) * Convert.ToDouble(b.Text);
-                }
-            }
+            List<Object> results = controller.calculateItemsSale(this);
+            string errMsg = (string) results.ElementAt(0);
+            total = (double)results.ElementAt(1);
+            correctAmounts = (bool)results.ElementAt(2);
+            SoldItems = (Dictionary<string, int>)results.ElementAt(3);
+
             if (correctAmounts)
             {
                 this.Total_Sum_Text_Block.Text = Convert.ToString(total);
